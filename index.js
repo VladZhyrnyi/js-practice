@@ -26,5 +26,14 @@ const min = 23;
 
 for (let index = max; index >= min; index--) {
     
-   console.log(index);
+   
+//    if (index % 2 === 0) {
+//     console.log(index);
+//    }
+    if ( index % 2 !== 0 ) {
+  continue
+    } else {
+ console.log(index)
+    }
+  
 }
