@@ -13,6 +13,27 @@
 //   alert("Не знаете? ECMAScript!");
 // }
 
-const answer = prompt("Какое официальное название JavaScript?");
+// const answer = prompt("Какое официальное название JavaScript?");
 
-alert(answer === "ECMAScript" ? "Верно!" : "Не знаете? ECMAScript!");
+// alert(answer === "ECMAScript" ? "Верно!" : "Не знаете? ECMAScript!");
+
+
+//3. Напишите цикл, который выводит в консоль
+//числа от max до min по убыванию
+// Выведите в консоль всех четных чисел от min до max
+const max = 50;
+const min = 23;
+
+for (let index = max; index >= min; index--) {
+    
+   
+//    if (index % 2 === 0) {
+//     console.log(index);
+//    }
+    if ( index % 2 !== 0 ) {
+  continue
+    } else {
+ console.log(index)
+    }
+  
+}
