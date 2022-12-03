@@ -17,7 +17,6 @@
 
 // alert(answer === "ECMAScript" ? "Верно!" : "Не знаете? ECMAScript!");
 
-
 //3. Напишите цикл, который выводит в консоль
 //числа от max до min по убыванию
 // Выведите в консоль всех четных чисел от min до max
@@ -25,8 +24,7 @@
 // const min = 23;
 
 // for (let index = max; index >= min; index--) {
-    
-   
+
 // //    if (index % 2 === 0) {
 // //     console.log(index);
 // //    }
@@ -35,7 +33,7 @@
 //     } else {
 //  console.log(index)
 //     }
-  
+
 // }
 //4. Напишите код, который будет спрашивать
 //логин с помощью prompt и логировать результат
@@ -52,15 +50,52 @@
 //то вывести строку "Здравствуйте!"
 //иначе выводить строку "Неверный пароль!"
 
-const login = prompt('Введите логин');
+// const login = prompt('Введите логин');
 
 // console.log(login);
 
-if (login === "Админ") {
-  const password = prompt('Введите пароль');
-  console.log(password === "Я главный" ? 'Здравствуйте!' : 'Неверный пароль!');
-} else if (login === null) {
-  console.log('Отменено');
-} else {
-  console.log("Я вас не знаю");
+// if (login === "Админ") {
+//   const password = prompt('Введите пароль');
+//   console.log(password === "Я главный" ? 'Здравствуйте!' : 'Неверный пароль!');
+// } else if (login === null) {
+//   console.log('Отменено');
+// } else {
+//   console.log("Я вас не знаю");
+// }
+
+// 5. При загрузке страницы пользователю предлагается
+//в prompt ввести число. Ввод добавляется к значению
+//переменной total.
+//Операция ввода числа продолжается до тех пор,
+//пока пользователь не нажмет кнопку Cancel в prompt.
+//После того как пользователь прекратил ввод нажав на
+//кнопку Cancel, показать alert со строкой "Общая сумма введенных чисел равна [число]."
+//Делать проверку,что пользователь ввел именно число,
+//а не произвольный набор символов, не нужно.
+
+// let result = "";
+// let i = 0;
+
+// do {
+//   i = i + 1;
+//   result = result + i;
+// } while (i < 5);
+
+// console.log(result);
+
+let number = prompt("Ведіть число");
+let total = 0;
+
+// do {
+//   total += Number(number);
+//   number = prompt("Ведіть число");
+// } while (number === true);
+
+while (number) {
+  total += Number(number);
+  number = prompt("Ведіть число");
+
+  console.log(total);
 }
+
+console.log(total);
