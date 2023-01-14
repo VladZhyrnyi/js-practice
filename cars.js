@@ -31,7 +31,7 @@ const cars = [
   },
   {
     brand: "Honda",
-    tymodelpe: "Accord",
+    model: "Accord",
     price: 20000,
     img: "https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg",
   },
@@ -49,15 +49,13 @@ const cars = [
   },
 ];
 
-
-
 const form = document.querySelector(".js-form");
 
 const ul = document.querySelector(".js-list");
 
 function createMarkup(arr) {
   const markup = arr.map(
-    (item) => `<li>
+    (item) => `<li class="cars__card">
       <img src="${item.img}" alt="${item.brand}" width='300'>
       <h2>${item.brand}</h2>
       <h3>${item.model}</h3>
@@ -67,3 +65,26 @@ function createMarkup(arr) {
   ul.innerHTML = markup.join("");
 }
 createMarkup(cars);
+
+form.addEventListener("submit", onSubmitClick);
+
+
+
+function onSubmitClick(event) {
+  event.preventDefault();
+
+  console.log(event.currentTarget.elements)
+
+  const { query, type } = event.currentTarget.elements;
+
+  console.dir(type)
+  console.log(type.value); // brand || model 
+
+  const filteredArr = cars.filter(
+    (item) => item[type.value].toLowerCase().includes(query.value.toLowerCase())
+  );
+
+  // console.log(filteredArr);
+
+  createMarkup(filteredArr);
+}
