@@ -424,5 +424,3 @@ const users =
 // const getAllFriends = users => users.flatMap(user => user.friends)
 
 // console.log(getAllFriends(users));
-
-console.dir(document)
